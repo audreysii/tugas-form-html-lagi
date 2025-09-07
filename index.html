@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Login</title>
+    <style>
+        body {
+            font-family: tim, sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #c5f8f9;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333333;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            margin-top: 10px;
+        }
+
+        .radio-group label,
+        .checkbox-group label {
+            display: inline-block;
+            font-weight: normal;
+            margin-right: 15px;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="post">
+        <h2>Selamat Datang</h2>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Masukkan username">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Masukkan password">
+
+        <label for="message">Pesan:</label>
+        <textarea id="message" name="message" placeholder="Tulis pesan di sini"></textarea>
+
+        <label>Jenis Kelamin:</label>
+        <div class="radio-group">
+            <label><input type="radio" name="gender" value="pria"> Pria</label>
+            <label><input type="radio" name="gender" value="wanita"> Wanita</label>
+        </div>
+
+        <label>Hobi:</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="hobby" value="membaca"> Membaca</label>
+            <label><input type="checkbox" name="hobby" value="olahraga"> Olahraga</label>
+            <label><input type="checkbox" name="hobby" value="musik"> Musik</label>
+        </div>
+
+        <label for="country">Negara:</label>
+        <select id="country" name="country">
+            <option value="">Pilih negara</option>
+            <option value="indonesia">Indonesia</option>
+            <option value="malaysia">Malaysia</option>
+            <option value="singapore">Singapura</option>
+            <option value="thailand">Thailand</option>
+        </select>
+
+        <input type="submit" value="Kirim">
+    </form>
+</body>
+</html>
